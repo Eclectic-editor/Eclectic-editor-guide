@@ -1,0 +1,27 @@
+@use '../../styles/mixin' as mixin;
+
+.footer {
+  height: 60px;
+  background: var(--black);
+
+  .inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+  }
+
+  p {
+    color: var(--white);
+
+    @include mixin.tablet {
+      font-size: 1.4rem;
+    }
+  }
+
+  img {
+    height: 30px;
+    object-fit: cover;
+    filter: brightness(0) invert(1);
+  }
+}

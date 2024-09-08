@@ -1,0 +1,84 @@
+@use '../../styles/mixin' as mixin;
+
+.section-intro {
+  height: 100vh;
+  background: url('../../assets/images/bg.png');
+  background-size: cover;
+
+  .inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    height: 100%;
+  }
+
+  .title-intro {
+    font-size: 5.5rem;
+    font-weight: 700;
+    text-align: center;
+
+    @include mixin.tablet {
+      font-size: 3rem;
+    }
+  }
+
+  .link-download {
+    padding: 10px 20px;
+    border-radius: 20px;
+    background: var(--black);
+    color: var(--white);
+  }
+}
+
+.section-feature {
+  padding: 100px 0;
+  background: var(--black);
+
+  .title-feature {
+    display: block;
+    font-size: 3rem;
+    text-align: center;
+    color: var(--white);
+
+    @include mixin.tablet {
+      font-size: 2rem;
+    }
+  }
+
+  .box-text {
+    padding: 50px 40px 20px;
+    box-sizing: border-box;
+    color: var(--white);
+
+    @include mixin.tablet {
+      padding: 50px 0 20px;
+    }
+
+    h2 {
+      font-size: 2rem;
+    }
+
+    .desc {
+      margin-top: 10px;
+    }
+  }
+
+  .box-video {
+    width: 100%;
+    padding: 0 40px;
+    box-sizing: border-box;
+
+    @include mixin.tablet {
+      padding: 0;
+    }
+  }
+
+  video {
+    width: 100%;
+    border: 1px solid var(--white);
+    border-radius: 16px;
+    overflow: hidden;
+  }
+}
